@@ -117,6 +117,7 @@ export default function Profile() {
       dispatch(signOutUserFailure(error.message));
     }
   }
+  
 
 
   return (
