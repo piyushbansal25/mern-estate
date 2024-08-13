@@ -19,7 +19,7 @@ export default function CreateListing() {
         bedrooms : 1,
         bathrooms : 1,
         regularPrice : 50,  
-        discountPrice : 50,
+        discountPrice : 0,
         offer : false,
         parking : false,
         furnished : false,
@@ -107,8 +107,8 @@ export default function CreateListing() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            if(formData.imageUrls.length < 1) return setError('You must upload atleast one image')
-            if(+formData.regularPrice < +formData.discountPrice) return setError('Regular price must be greater than Discount Price')
+            if(formData.imageUrls.length < 1) return setError(<div className="text-red-500">You must upload atleast one image</div>)
+            if(+formData.regularPrice < +formData.discountPrice) return setError(<div className="text-red-500">Regular price must be greater than Discount Price</div>)
             setLoading(true);
             setError(false);
             const res = await fetch('/api/listing/create', {
@@ -257,7 +257,7 @@ export default function CreateListing() {
                     </div>
                 </div>
                 )}
-
+                                            
             </div>         
         </div>
         <div className='flex flex-col flex-1 gap-4'>
