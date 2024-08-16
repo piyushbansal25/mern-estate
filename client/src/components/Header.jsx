@@ -27,14 +27,14 @@ export default function Header() {
   }, [location.search]);
 
   return (
-    <header className='bg-zinc-400 shadow-md'>
+    <header className='bg-slate-200 shadow-md'>
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
         <Link to="/">
       <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-        <span className='text-zinc-200'>
-          BANSAL
+        <span className='text-black'>
+          DM
         </span>
-        <span className='text-zinc-500'>ESTATES</span>
+        <span className='text-zinc-500'>Estate</span>
       </h1>
       </Link>
       
